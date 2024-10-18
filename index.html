@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garify</title>
+    <link rel="stylesheet" href="sytles.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Add New Car</h3>
+    <label for="new-car-name">Name:</label>
+    <input type="text" id="new-car-name" placeholder="Enter car name">
+
+    <label for="new-car-mileage">Mileage:</label>
+    <input type="text" id="new-car-mileage" placeholder="Enter car mileage">
+
+    <label for="new-car-year">Year:</label>
+    <input type="text" id="new-car-year" placeholder="Enter car year">
+
+    <label for="new-car-price">Price:</label>
+    <input type="text" id="new-car-price" placeholder="Enter car price">
+
+    <label for="new-car-engine">Engine:</label>
+    <input type="text" id="new-car-engine" placeholder="Enter car engine">
+
+    <label for="new-car-transmission">Transmission:</label>
+    <input type="text" id="new-car-transmission" placeholder="Enter car transmission">
+
+    <label for="new-car-photo">Photo URL:</label>
+    <input type="text" id="new-car-photo" placeholder="Enter car photo URL">
+
+    <button id="add-car-button">Add Car</button>
+
+    <!-- Car Image Search Section (Directly below the Add New Car part) -->
+    <h3>Search Car Image</h3>
+    <label for="search-car-image">Enter car name or keyword:</label>
+    <input type="text" id="search-car-image" placeholder="Enter search term for car image">
+    <button id="search-car-image-button">Search Image</button>
+
+    <!-- This is where the image search result will be displayed -->
+    <div id="search-result"></div>
+  </div>
+           <!-- Cars Available for Sale Section -->
+    <h3>Cars Available for Sale</h3>
+    <ul id="car-list"></ul>
+
+    <!-- Car Details Section (Displays after clicking a car from the list) -->
+    <div id="car-info"></div>
+  </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

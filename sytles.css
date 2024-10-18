@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(https://i.pinimg.com/236x/6e/5c/11/6e5c112e134b3eb815a95ee454e702a6.jpg);
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+
+}
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  /* Form and search input styling */
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Section titles */
+  h3 {
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  /* Car list styling */
+  #car-list {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #car-list li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #car-list li:hover {
+    background-color: #e2e6ea;
+  }
+  
+  /* Car details section */
+  #car-info {
+    margin-top: 20px;
+  }
+  
+  #car-info img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Car image search result */
+  #search-result img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+ 
