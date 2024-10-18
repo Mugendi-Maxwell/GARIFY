@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Fetch and display cars already available for sale
+  
   fetch("http://localhost:3000/cars")
     .then((response) => response.json())
     .then((data) => displayData(data))
     .catch((error) => console.error("Error fetching car data:", error));
 
-  // Add car button event listener
+  //  car button event listener
   document.getElementById('add-car-button').addEventListener('click', addNewCar);
 
-  // Add search button event listener for searching a car image URL
+  //  search button event listener for searching a car image URL
   document.getElementById('search-car-image-button').addEventListener('click', searchCarImage);
 });
 
-// Function to display the list of cars available for sale
+// function to display the list of cars available for sale
 function displayData(carData) {
   const carList = document.getElementById("car-list");
-  carList.innerHTML = ""; // Clear previous list
+  carList.innerHTML = ""; 
 
   carData.forEach((car) => {
     const listItem = document.createElement("li");
@@ -25,7 +25,7 @@ function displayData(carData) {
   });
 }
 
-// Function to display car details when a car is clicked
+// function to display car details when car is clicked
 function displayCarDetails(car) {
   const carInfoDiv = document.getElementById("car-info");
 
@@ -40,18 +40,18 @@ function displayCarDetails(car) {
     <button id="delete-button" style="margin-left: 10px;">Delete</button>
   `;
 
-  // Buy button functionality
+  // buy button functionality
   const buyButton = document.getElementById("buy-button");
   buyButton.onclick = () => alert(`You have successfully bought the ${car.name}!`);
 
-  // Delete button functionality
+  // delete button functionality
   const deleteButton = document.getElementById("delete-button");
   deleteButton.onclick = () => deleteCar(car.id);
 }
 
-// Function to handle adding a new car
+// function to handle adding a new car
 function addNewCar() {
-  // Get form values
+  
   const name = document.getElementById("new-car-name").value;
   const mileage = document.getElementById("new-car-mileage").value;
   const year = document.getElementById("new-car-year").value;
@@ -60,7 +60,7 @@ function addNewCar() {
   const transmission = document.getElementById("new-car-transmission").value;
   const photoUrl = document.getElementById("new-car-photo").value;
 
-  // Create new car object
+  
   const newCar = {
     name: name,
     mileage: mileage,
@@ -88,7 +88,7 @@ function addNewCar() {
       listItem.onclick = () => displayCarDetails(addedCar);
       carList.appendChild(listItem);
 
-      // Clear the form inputs
+      // clearing the form inputs
       document.getElementById("new-car-name").value = "";
       document.getElementById("new-car-mileage").value = "";
       document.getElementById("new-car-year").value = "";
@@ -97,19 +97,19 @@ function addNewCar() {
       document.getElementById("new-car-transmission").value = "";
       document.getElementById("new-car-photo").value = "";
 
-      // Optionally, show a success message
+      
       alert('New car added for sale!');
     })
     .catch((error) => console.error("Error adding car:", error));
 }
 
-// Function to delete a car
+// function to delete a car
 function deleteCar(carId) {
   fetch(`http://localhost:3000/cars/${carId}`, {
     method: "DELETE"
   })
     .then(() => {
-      // Remove the deleted car from the list
+      // removing the deleted car from the list
       const carList = document.getElementById("car-list");
       const listItems = carList.querySelectorAll("li");
 
@@ -119,7 +119,7 @@ function deleteCar(carId) {
         }
       });
 
-      // Optionally, show a success message
+      
       alert('Car deleted successfully!');
     })
     .catch((error) => console.error("Error deleting car:", error));
@@ -130,11 +130,11 @@ function searchCarImage() {
   const searchQuery = document.getElementById("search-car-image").value;
   const searchResultDiv = document.getElementById("search-result");
 
-  // Replace 'YOUR_UNSPLASH_API_KEY' with your actual Unsplash API key
+  
   fetch(`https://api.unsplash.com/search/photos?query=${searchQuery}&client_id=q51vsfDzWylhVSodBpQL0ixLZ7LTZq-5WRgRBIR4mKY`)
     .then((response) => response.json())
     .then((data) => {
-      searchResultDiv.innerHTML = ''; // Clear previous results
+      searchResultDiv.innerHTML = ''; 
       if (data.results.length > 0) {
         const imgUrl = data.results[0].urls.small;
         const imgElement = document.createElement('img');
